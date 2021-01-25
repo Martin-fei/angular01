@@ -1,0 +1,53 @@
+<p>myc03 works!</p>
+<!-- ng中
+[属性名]="值"
+-->
+<img [src]="logo" alt="">
+<!-- (事件名) -->
+<button (click)="show()">点我</button>
+<button (click)="add()">{{count}}</button>
+<button (click)="count=count+1">{{count}}</button>
+
+<button (click)="num=num+1" >+</button>
+{{num}}
+<button (click)="num=num-1" [disabled]="num==1">-</button>
+
+<input type="text" [(ngModel)]="name">
+<p>{{name}}</p>
+
+商品名称：{{product.name}}<br>
+单价:{{product.price}}<br>
+数量：<button (click)="product.count=product.count-1" [disabled]="product.count==1">-</button><input type="text" [(ngModel)]="product.count"><button (click)="product.count=product.count+1">+</button><br>
+总价：{{product.count * product.price}}
+
+
+<ul>
+  <li *ngFor="let ii of i">{{ii}}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let ii of i; let iiii=index">
+   <span>{{iiii}}</span> 
+   <span>{{ii}}</span> 
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let emp of emps;let i=index">
+    序号：{{i+1}}
+    姓名：{{emp.name}}
+    年龄：{{emp.age}}
+    手机：{{emp.phone}}
+  </li>
+</ul>
+
+<h3>面试分数{{score}}</h3>
+<button *ngIf="this.score>=0" (click)="score=score-10">减分</button>
+<button *ngIf="this.score<=100" (click)="score=score+10">加分</button>
+
+<ng-container *ngIf="score>=60; else elseTemplate">
+  分数及格
+</ng-container>
+<ng-template #elseTemplate>
+  分数不及格
+</ng-template>

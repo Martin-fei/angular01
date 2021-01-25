@@ -1,0 +1,11 @@
+<p>myc04 works!</p>
+<div>{{data}}</div>
+<div [innerHTML]="data"></div>
+
+<button (click)="size=size+2">变大</button>
+<div [ngStyle]="{color:'red',fontSize:size+'px'}">hello world</div>
+
+<button (click)="r=r+2">变圆</button>
+<div [ngStyle]="{width:'100px',height:'100px',background:'blue',borderRadius:r+'px'}"></div>
+
+<span [ngClass]="{'success': score>100&&score<=150,'danger': score>150}" class="btn" (click)="score=score+10">{{score}}</span>
