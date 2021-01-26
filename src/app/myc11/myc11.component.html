@@ -1,0 +1,8 @@
+<p>myc11 works!</p>
+<button (click)="ns.names.push('新讲师')">添加</button>
+<ul>
+  <li *ngFor="let item of ns.names; let i=index">
+    <span>{{item}}</span>
+    <button (click)="ns.names.splice(i,1)">删除</button>
+  </li>
+</ul>

@@ -1,4 +1,37 @@
 <!-- <app-myc01></app-myc01> -->
 <!-- <app-myc02></app-myc02> -->
 <!-- <app-myc03></app-myc03> -->
-<app-myc04></app-myc04>
+<!-- <app-myc04></app-myc04> -->
+<!-- <app-myc05></app-myc05> -->
+<!-- 生命周期 -->
+<button (click)="show06=!show06">显示/消失</button>
+<app-myc06 *ngIf="show06"></app-myc06>
+
+<!-- 父子传参 -->
+<app-myc07 
+name="dongdong" 
+phone="18262397721"
+[married]="true"
+[boss]="{name:'liwenhua',age:33}"
+></app-myc07>
+<!-- 子传父 -->
+<!-- 
+  1.父中声明方法，通过事件方式传递给子  (事件名)= 函数($event)
+  2.子中声明事件触发器，用来保存传入的方法
+  3.子中触发方法，传的是子的参数
+ -->
+<app-myc08 (showMsg)="show($event)"></app-myc08>
+
+<!-- 掌握子元素，变量关联组件 -->
+<!-- 
+  #:唯一标识，类似于id
+  #m3 就类似于 id=“m3”
+ -->
+<app-myc09 #m09></app-myc09>
+<button (click)="doAdd()">+</button>
+<br />
+<button>显示</button>
+
+<!-- 服务service 类似于vuex -->
+<app-myc10></app-myc10>
+<app-myc11></app-myc11>

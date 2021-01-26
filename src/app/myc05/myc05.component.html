@@ -1,0 +1,36 @@
+<p>myc05 works!</p>
+<ul>
+  <li>亮亮</li>
+  <li>然然</li>
+  <li appHidden>东东</li>
+  <li>花花</li>
+  <li>小新</li>
+</ul>
+
+<ul>
+  <li>大写{{'nice to meet you' | uppercase}}</li>
+  <li>小写{{'NICE TO MEET YOU' | lowercase}}</li>
+  <li>首字母大写{{'nice to meet you' | titlecase}}</li>
+  <li>百分数：{{0.5555 | percent}}</li>
+  <li>百分数：{{0.05555 | percent:'0.2'}}</li>
+  <li>百分数：{{0.055 | percent:'2.2'}}</li>
+  <li>千进位的钱{{123466.789 | currency}}</li>
+  <li>千进位的钱{{123466.789 | currency:'￥'}}</li>
+  <li>日期{{16040439666 | date}}</li>
+  <!-- 
+    year     年y
+    month    月M
+    day      日d
+    hour     时h
+    minute   分m
+    second   秒s
+   -->
+  <li>日期{{1604043966000 | date:"y-M-d h:m:s"}}</li>
+  <li>日期{{1604043966000 | date:"y-MM-dd hh:mm:ss"}}</li>
+  <li>日期{{1604043966000 | date:"y-MM-dd HH:mm:ss"}}</li>
+  <li>{{'abcdefghssnkak' | slice:3}}</li>
+  <li>{{'abcdefghssnkak' | slice:3:10}}</li>
+  <!-- 自定义指令 -->
+  <li>{{9 | pow :2}}</li>
+  <li>{{50 | pow:5}}</li>
+</ul>
