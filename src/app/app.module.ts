@@ -17,8 +17,11 @@ import { Myc08Component } from './myc08/myc08.component';
 import { Myc09Component } from './myc09/myc09.component';
 import { Myc10Component } from './myc10/myc10.component';
 import { Myc11Component } from './myc11/myc11.component';
+import { Myc12Component } from './myc12/myc12.component';
 
 // 引入form模块
+// 引入网络模块
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,8 +39,10 @@ import { Myc11Component } from './myc11/myc11.component';
     Myc09Component,
     Myc10Component,
     Myc11Component,
+    Myc12Component,
   ],
-  imports: [BrowserModule, FormsModule],
+  // 注入模块
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

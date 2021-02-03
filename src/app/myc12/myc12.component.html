@@ -1,0 +1,12 @@
+<p>myc12 works!</p>
+<!-- res的值是请求完毕后才赋值，请求完毕前没有值 -->
+<!-- 解决：判断res有值之后在渲染 -->
+<div *ngIf="res">
+  <div *ngFor="let item of res.result">
+    <img [src]="item.image">
+    <div>
+      <span>{{item.title}}</span>
+      <span>{{item.passtime}}</span>
+    </div>
+  </div>
+</div>

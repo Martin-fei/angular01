@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import * as EventEmitter from 'events';
+// import * as EventEmitter from 'events';
 
 @Component({
   selector: 'app-myc08',
